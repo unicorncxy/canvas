@@ -60,9 +60,42 @@ body{
   box-shadow: 0 0 3px rgba(0,0,0,0.95);
   transform: scale(1.2);
 }
+
+.bgcolor>li.active{
+  box-shadow: 0 0 3px rgba(0,0,0,0.95);
+  transform: scale(1.2);
+}
+.bgcolor{
+  position: fixed;
+  top: 120px;
+  right: 28px;
+}
+.bgcolor>li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(0,0,0,0.25);
+    margin: 20px 0;
+    transition: all 0.3s;
+}
+.bgcolor>li.bg-pink{
+  background: #ffcccc;
+}
+.bgcolor>li.bg-green{
+  background: #CCFF99
+}
+.bgcolor>li.bg-grey{
+  background: #CCC;
+}
+.bgcolor>li.bg-blue{
+  background: #99CCFF;
+}
+
+
+
 .sizes {
   position: fixed;
-  right: 20px;
+  right: 28px;
   top: 10px;
 }
 .sizes > li {
@@ -71,10 +104,20 @@ body{
 .sizes > .thin{
   height: 0;
   width: 20px;
-  border-top: 3px solid black;
+  border-top: 2px solid black;
 }
 .sizes > .thick{
   height: 0;
   width: 20px;
-  border-top: 6px solid black;
+  border-top: 4px solid black;
+}
+.sizes > .thick2{
+  height: 0;
+  width: 20px;
+  border-top: 5px solid black;
+}
+.sizes > .thick3{
+  height: 0;
+  width: 20px;
+  border-top: 7px solid black;
 }

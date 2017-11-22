@@ -2,10 +2,10 @@ var yyy = document.getElementById('xxx');
 var context = yyy.getContext('2d');
 var lineWidth = 5
 
+
 autoSetCanvasSize(yyy)
 
 listenToUser(yyy)
-
 
 var eraserEnabled = false
 pen.onclick = function(){
@@ -26,7 +26,7 @@ download.onclick = function(){
   var a = document.createElement('a')
   document.body.appendChild(a)
   a.href = url
-  a.download = '我的画儿'
+  a.download = 'my picture'
   a.target = '_blank'
   a.click()
 }
@@ -54,12 +54,24 @@ blue.onclick = function(){
   blue.classList.add('active')
 }
 
+bg-pink.onclick = function(){
+  bg-pink.classList.add('active')
+
+}
 thin.onclick = function(){
-  lineWidth = 5
+  lineWidth = 4
 }
 thick.onclick = function(){
+  lineWidth = 6
+}
+thick2.onclick = function(){
+  lineWidth = 8
+}
+thick3.onclick = function(){
   lineWidth = 10
 }
+
+
 
 /******/
 
@@ -96,7 +108,6 @@ function drawLine(x1, y1, x2, y2) {
 
 function listenToUser(canvas) {
 
-
   var using = false
   var lastPoint = {
     x: undefined,
@@ -104,7 +115,7 @@ function listenToUser(canvas) {
   }
   // 特性检测
   if(document.body.ontouchstart !== undefined){
-    // 触屏设备 苏菲就是个触屏设备啊哥
+    // 触屏设备
     canvas.ontouchstart = function(aaa){
       var x = aaa.touches[0].clientX
       var y = aaa.touches[0].clientY
